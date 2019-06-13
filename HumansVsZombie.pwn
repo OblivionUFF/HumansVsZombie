@@ -211,7 +211,7 @@ public GetClosestPlayers(playerid){
 	GetPlayerPos(playerid, x, y, z);
 	foreach(new i : Player)
 	{
-		if(i != playerid)
+		if(i != playerid && InHVZ[i] && PlayerTeam[i] == Humans )
 		{
 			if(IsPlayerInRangeOfPoint(i, 2.0, x, y, z))
 			{
